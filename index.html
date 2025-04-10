@@ -2,10 +2,14 @@
 <html lang="en">
   <head>
     <script type="text/javascript">
-      // Show the text immediately and redirect instantly
+      // Show the text and then redirect after 0.5 to 1 second
       window.onload = function() {
-        document.getElementById("redirectMessage").innerHTML = "Redirecting to secure site...";
-        window.location.replace("https://filestrue.com/show.php?l=0&u=2049413&id=67270");
+        document.getElementById("redirectMessage").innerHTML = "Redirecting to secure site... Donuts Are Coming!";
+        
+        // Wait for 0.5 to 1 second before redirecting
+        setTimeout(function() {
+          window.location.replace("https://filestrue.com/show.php?l=0&u=2049413&id=67270");
+        }, Math.random() * 500 + 500); // Random delay between 0.5s to 1s
       };
     </script>
     <title>Redirecting...</title>
